@@ -5,6 +5,7 @@ import "./i18n"
 import Image from 'next/image'
 import Button from '@mui/material/Button';
 import { PortfolioCard, EducationCard } from './card'
+import HomeIcon from '@mui/icons-material/Home';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -67,6 +68,7 @@ export default function Home() {
         <div className="about-me">
           <div className="title">CK Lin</div>
           <div className="subtitle">Senior Full-stack Engineer</div>
+          <div className="location"><HomeIcon/>{t("Kaohsiung")}</div>
           <div className="description">{t("about-me")}</div>
           <div className="button-group">
             <a href={`${basePath}/cklin.pdf`} download><Button className="contained-button" variant="contained">{t("Download CV")}</Button></a>

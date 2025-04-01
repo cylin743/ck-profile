@@ -42,6 +42,7 @@ const resources = {
           'Feng Chia University': 'Feng Chia University',
           'master':"Master of Information Engineering and Computer Science, Information Security",
           'bachelor':"Bachelor of Information Engineering and Computer Science",
+          'Kaohsiung':'Kaohsiung',
 
         },
     },
@@ -87,7 +88,8 @@ const resources = {
           'concertina player': 'Concertina播放器',
           'Feng Chia University': '逢甲大學',
           'master':'碩士, 資訊工程系資訊安全實驗室',
-          'bachelor':'學士, 資訊工程系'
+          'bachelor':'學士, 資訊工程系',
+          'Kaohsiung':'高雄',
       },
     },
   };
