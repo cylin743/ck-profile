@@ -6,8 +6,8 @@ i18n
   .use(initReactI18next)  // 初始化設定
   .init({
     resources,            // 引入定義語系與對應文字的 json 檔
-    lng: 'en',            // 預設語系為 en
-    fallbackLng: 'en',    // 若找不到對應語系則回傳 en
+    lng: 'zh',            // 預設語系為 en
+    fallbackLng: 'zh',    // 若找不到對應語系則回傳 en
     defaultNS: 'common',
     preload: ['en', 'zh'],
     ns: 'common',
