@@ -1,0 +1,42 @@
+{
+  "name": "ck-profile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "rm -rf node_modules/.cache && next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@formatjs/intl-localematcher": "^0.6.1",
+    "@mui/icons-material": "^5.15.12",
+    "@mui/material": "^5.17.1",
+    "@types/negotiator": "^0.6.3",
+    "accept-language": "^3.0.20",
+    "i18next": "^24.2.3",
+    "i18next-resources-to-backend": "^1.2.1",
+    "lz-string": "^1.5.0",
+    "negotiator": "^1.0.0",
+    "next": "14.1.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^15.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.1",
+    "postcss": "^8",
+    "sass": "^1.86.1",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
