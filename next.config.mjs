@@ -6,9 +6,6 @@ const nextConfig = {
         unoptimized: true, // Disable default image optimization
         domains: ['cylin743.github.io'],
         path: '/ck-profile',
-        loader:"custom",
-        loaderFile:"./image-loader.js",
-
     },
     async rewrites() {
         return [

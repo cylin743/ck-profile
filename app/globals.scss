@@ -1,9 +1,14 @@
 .menu-container{
+  position: fixed;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 40px;
+  justify-content: space-around;
+  padding: 10px 0px;
   border-bottom: 1px solid #eee;
+  background-color: #fff;
+  width: 100%;
+  z-index: 99;
+  top: 0;
   .profile-name{
     font-size: 20px;
     width: 20vw;
@@ -11,6 +16,11 @@
   .menu-list{
     display: flex;
     gap: 30px;
+    .desktop{
+      @media (max-width: 730px) {
+        display: none;
+      }
+    }
     .menu{
       font-size: 16px;
       a{ 
@@ -20,7 +30,6 @@
       a:hover, a:visited, a:link, a:active {
         text-decoration: none;
       }
-
     }
   }
 }
@@ -36,6 +45,9 @@
 }
 .about-me-container{
   display: flex;
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
   padding: 260px 20px;
   gap: 40px;
   justify-content: center;
@@ -73,7 +85,12 @@
   flex-direction: column;
   padding: 50px 20px 100px 20px;
   .sliders {
-    width: 790px;
+    @media (max-width: 860px) {
+      width: 250px;
+    }
+    @media (min-width: 861px) {
+      width: 790px;
+    }
     height: 320px;
     margin-top: 20px;
     position: relative;

@@ -15,7 +15,6 @@ const basePath = isDev ? '' : '/ck-profile';
 
 function ExperienceCard(params:any) {
   const {company, title, date, children} = params
-  console.log(params)
   return (<div className="experience-row">
     <div className="company">{company}</div>
     <div className="title">{title}</div>
@@ -28,6 +27,7 @@ export default function Home() {
   // const { t } = useTranslation();
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState("zh");
+  const device  = typeof window !== "undefined" && window?.innerWidth >= 861 ? "desktop":"mobile";
   const handleChangeLang = () => {
     if(lang === "zh"){
       setLang("en")
@@ -38,28 +38,25 @@ export default function Home() {
     }
   }
     
-  // const handleChangeLanguage = () => {
-  //     i18n.changeLanguage('zh')
-  // }
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: device === "desktop" ? 3 : 1,
     slidesToScroll: 1,
     autoplay: false,
     
   };
   
   return (
-    <main>
+    <main className="main">
       <div className="menu-container">
         <div className="profile-name">CK Lin</div>
         <div className="menu-list">
-          <div className="menu"><a href="#about_me">{t("About")}</a></div>
-          <div className="menu"><a href="#portfolio">{t("Portfolio")}</a></div>
-          <div className="menu"><a href="#experience">{t("Experience")}</a></div>
-          <div className="menu"><a href="#education">{t("Education")}</a></div>
+          <div className="menu desktop"><a href="#about_me">{t("About")}</a></div>
+          <div className="menu desktop"><a href="#portfolio">{t("Portfolio")}</a></div>
+          <div className="menu desktop"><a href="#experience">{t("Experience")}</a></div>
+          <div className="menu desktop"><a href="#education">{t("Education")}</a></div>
           <div className="menu" onClick={handleChangeLang}><a>{t("lang")}</a></div>
         </div>
       </div>

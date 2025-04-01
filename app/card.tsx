@@ -13,7 +13,7 @@ function PortfolioCard(params:any) {
         <Typography className='company-tag' variant="body2" sx={{ color: 'text.secondary' }}>
           {company}
         </Typography>
-        <Typography className="card-title" gutterBottom variant="h4" component="div">
+        <Typography className="card-title" gutterBottom variant="h5" component="div">
           {title}
         </Typography>
         <div className="tech">
@@ -36,7 +36,7 @@ function EducationCard(params:any){
     return (
       <Card className="card" key={key}>
       <CardContent>
-        <Typography className="card-title" gutterBottom variant="h5" component="div">
+        <Typography className="card-title" gutterBottom variant="h6" component="div">
           {title}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
