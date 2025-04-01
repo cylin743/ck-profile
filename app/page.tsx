@@ -5,8 +5,7 @@ import "./i18n"
 import Avatar from '@mui/material/Avatar';
 
 
-export default function Home(params: {lang:string}) {
-  const {lang} = params
+export default function Home() {
   // const { t } = useTranslation();
   const { t, i18n } = useTranslation();
   i18n.changeLanguage("zh")

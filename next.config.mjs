@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // basePath: "/shamisen-player",
-    // output: "export",  // <=== enables static exports
-    // reactStrictMode: true,
-    // experimental: {
-    //     missingSuspenseWithCSRBailout: false,
-    // },
+    basePath: "/ck-profile",
+    output: "export",  // <=== enables static exports
+    reactStrictMode: true,
+    experimental: {
+        missingSuspenseWithCSRBailout: false,
+    },
     // sassOptions: {
     //     implementation: 'sass-embedded',
     // },
