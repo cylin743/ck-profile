@@ -23,6 +23,14 @@ function ExperienceCard(params:any) {
   </div>)
 }
 
+function SkillCard(params:any) {
+  const {company, title, date, children} = params
+  return (<div className="skill-row">
+    <div className="title">{title}</div>
+    <div className="description">{children}</div>
+  </div>)
+}
+
 export default function Home() {
   // const { t } = useTranslation();
   const { t, i18n } = useTranslation();
@@ -57,6 +65,7 @@ export default function Home() {
           <div className="menu desktop"><a href="#portfolio">{t("Portfolio")}</a></div>
           <div className="menu desktop"><a href="#experience">{t("Experience")}</a></div>
           <div className="menu desktop"><a href="#education">{t("Education")}</a></div>
+          <div className="menu desktop"><a href="#skills">{t("Skills")}</a></div>
           <div className="menu" onClick={handleChangeLang}><a>{t("lang")}</a></div>
         </div>
       </div>
@@ -184,10 +193,52 @@ export default function Home() {
           key={2}
         />
       </div>
-      
-      
+      </div>
+      <div className="skill-container" id="skills">
+        <h2>{t("Skills")}</h2>
+        <SkillCard 
+          title="Programming Languages"
+          >
+           <li>Python (3+ years)</li> 
+           <li>Golang (2+ years)</li> 
+           <li>PHP (3+ years)</li> 
+           <li>Java (1+ year)</li>
+           <li>ReactJS(2+ years)</li>
+           <li>Elixir, Shell Script</li>
+        </SkillCard>
+        <SkillCard 
+          title="Cloud Service"
+          >
+           <li>Computing: EC2, ECS, Lambda, Batch, etc.</li> 
+           <li>Data Queues: SQS, Kinesis, Kafka, etc.</li> 
+           <li>Data Management: S3, RDS, Redis, DynamoDB, etc.</li> 
+           <li>Networking: VPC, API Gateway</li>
+           <li>Search Services: Elasticsearch</li>
+           <li>DevOps: CodeBuild, CodeDeploy, CloudFormation, etc.</li>
+        </SkillCard>
+        <SkillCard 
+          title="Backend Skills"
+          >
+           <li>Data queuing development</li> 
+           <li>Distributed computing</li> 
+           <li>Database management and optimization</li> 
+           <li>High-traffic service development</li>
+           <li>Data ingestion development</li>
+           <li>Integrated payment-related systems</li>
+           <li>GraphQL API development</li>
+           <li>Service containerized development (Docker)</li>
+           <li>Infrastructure as Code development</li>
+        </SkillCard>
+        <SkillCard 
+          title="Frontend Skills"
+          >
+           <li>React, Vue, React Native</li> 
+        </SkillCard>
 
       </div>
+      <footer className="footer">
+        © 2025 CK Lin. All rights reserved.
+      </footer>
     </main>
   );
 }

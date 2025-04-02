@@ -176,3 +176,36 @@
   gap: 25px;
 
 }
+
+.skill-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 50px 100px 50px;
+  .skill-row{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 90vw;
+    border-left: solid #eee;
+    gap: 5px;
+    .title{
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .description{
+      margin-top: 10px;
+    }
+  }
+  gap: 25px;
+
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #333;
+  color: #eee;
+}
